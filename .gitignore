@@ -1,0 +1,27 @@
+# Rust build artifacts
+/target/
+*/target/
+
+# Cargo lock for libraries (keep for binaries)
+# smf-sim is a binary → keep Cargo.lock
+# pfcp-common is a library → but same workspace, so keep it
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# PCAP captures (can be large)
+*.pcap
+*.pcapng
