@@ -1,6 +1,6 @@
-[package]
-name = "smf-sim-workspace"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = ["pfcp-common"]
+resolver = "2"
 
-[dependencies]
+
+
