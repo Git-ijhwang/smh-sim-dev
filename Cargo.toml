@@ -1,5 +1,5 @@
 [workspace]
-members = ["pfcp-common"]
+members = ["pfcp-common", "smf-sim"]
 resolver = "2"
 
 
