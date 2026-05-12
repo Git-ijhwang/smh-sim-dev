@@ -8,6 +8,8 @@ pub struct SimSession {
     pub upf_seid:    u64,
     pub upf_teid:    u32,
     pub upf_n3_addr: Ipv4Addr,
+    pub ue_ip:       Ipv4Addr,
+
     pub gnb_teid:    u32,
     pub created_at:  std::time::Instant,
 }

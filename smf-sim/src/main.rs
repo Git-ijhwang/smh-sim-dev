@@ -1,6 +1,7 @@
 pub mod config;
 pub mod transport;
 pub mod state;
+pub mod scenario;
 
 use std::net::Ipv4Addr;
 use std::path::PathBuf;
@@ -310,8 +311,11 @@ async fn main() -> anyhow::Result<()>
 
     match cli.command {
         Commands::Run { scenario, num_ues } => {
-            tracing::info!("Scenario {} not implemented yet", scenario);
-            tracing::warn!("Not impremented yet");
+            let mut sim_state = state::SimState::new(&config.session);
+            match scenario {
+                1 => scenario::basic_lifecycle::run(&transport, &mut sim_state, &config).await?,
+                _ => anyhow::bail!("Scenario {} not implemented yet", scenario),
+            }
         },
 
         Commands::Send { message } => match message {
