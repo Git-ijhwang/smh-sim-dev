@@ -1,3 +1,13 @@
+pub const INTERFACE_ACCESS: u8 = 0;
+pub const INTERFACE_CORE: u8 = 1;
+pub const INTERFACE_SGI_LAN: u8 = 2;
+pub const INTERFACE_CP_FUNCTION: u8 = 3;
+
+// Apply Action 값 (TS 29.244 §8.2.26)
+pub const ACTION_DROP: u8 = 0x01;
+pub const ACTION_FORW: u8 = 0x02;
+pub const ACTION_BUFF: u8 = 0x04;
+
 //PFCP Message Types
 pub const RESERVED: u8 =	                        0;
 pub const PFCP_HEARTBEAT_REQ: u8 =	                1;  //PFCP Node Related Message
